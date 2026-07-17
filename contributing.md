@@ -23,30 +23,37 @@ If you're the PR author, use this list as self-review as the reviewer will be us
 
 ## Template Sections
 
+Write the PR the way you'd explain it to a teammate: intent first, in plain English — *then* the details. Scale the detail to the change; never pad a small PR or flatten a big one.
+
+### Author context
+
+**Required, and written by you — not AI-generated.** Every PR opens with a brief explanation in your own words, above the rest of the description, covering:
+
+- the **business context** behind the change, and
+- any **trade-offs** you made, and why.
+
+Everything below the divider may be AI-drafted; this block may not. A PR without it is incomplete. This is the PR's plain-English intent — there is no separate Summary section, so the description proper starts at *What changed*.
+
+Consider including [code snippets](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks) and/or [diagrams](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams) to explain concepts visually.
+
+### What changed
+
+Concisely describe the changes, as bullets — one plain statement each. Describe the *behaviour*, not the file list. In smaller PRs these might align closely with the commit messages; that's fine. Where a change is complex or its reason isn't obvious, a bullet can carry a short *why* — the Author context covers the overall intent, so keep these to the per-change rationale.
+
+Cut anything that doesn't earn its place:
+
+- **File-by-file narration** — describe behaviour, not the component inventory.
+- **Provenance** ("verified against X", "matches the legacy app") — that belongs in the commits.
+- **Diff-restating** — if a bullet only says what the code obviously does, drop it.
+- **Ceremony sections** — no Testing/Review boilerplate on a PR that doesn't need it.
+
 ### Relevant issues
 
-Use this section to reference any relevant issues or add other links to things this PR addresses.
+Reference any relevant issues or link to what this PR addresses.
 
 For example:
 > Closes BUG-123, relates to FEAT-456
 
-### Summary
-
-Use this section to explain why the changes in this PR have been done this way.
-
-Though it's tempting to point to task tracking systems like Jira to explain why a change has been made, this section aims to answer the engineering side of the story, focusing on why we've chosen this implementation of the product solution described in our task tracking system issue.
-
-Consider including [code snippets](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks) and/or [diagrams](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams) to provide visual explanation of concepts.
-
-### Changes made
-
-Use this section to concisely describe what the changes in this PR are.
-
-The template includes bullet points here to help keep things brief and focused.
-In smaller PRs, these bullet points might closely align with the commit messages, this is ok.
-
 ### Media
 
-Use this section to show how the changes will affect the application.
-
-This might take the form of before and after screenshots or videos. A video highlighting the changes made by this PR could also be acceptable.
+Show how the changes affect the application — before/after screenshots, or a short video highlighting the change. Worth it for anything with a UI.
